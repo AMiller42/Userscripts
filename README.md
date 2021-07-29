@@ -4,5 +4,5 @@ These scripts are designed for Tampermonkey. They'll almost certainly work with 
 
 ---
 
-* Simple Badges: If you don't like the new Mod and Staff badges that were added to Meta Stackexchange sites, this script replaces them with a diamond and a hexagon, respectively: 
-
+* Simple Badges: If you don't like the new Mod and Staff badges that were added to Meta Stackexchange sites, this script replaces them with a diamond and a hexagon, respectively: <br><br>
+![](resources/newbadges.PNG) ![](resources/simplebadges.PNG)
