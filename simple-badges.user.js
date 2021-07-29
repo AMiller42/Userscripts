@@ -18,10 +18,13 @@
     var staff = document.getElementsByClassName("s-badge__staff");
 
     Object.values(mods).forEach(diamond => {
+        var anchor = document.createElement("a");
         diamond.className = "";
-        diamond.style.color = "#2558C1";
         diamond.title = "Moderator";
-        diamond.innerHTML = " ♦";
+        diamond.innerHTML = "";
+        anchor.innerHTML = " ♦";
+        anchor.style.cursor = "default";
+        diamond.appendChild(anchor); // Super cursed, but it works, so...
     });
 
     Object.values(staff).forEach(hexagon => {
