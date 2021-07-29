@@ -30,6 +30,7 @@
     Object.values(staff).forEach(hexagon => {
         hexagon.className = "";
         hexagon.style.color = "orange";
+        hexagon.style.cursor = "default";
         hexagon.title = "Staff";
         hexagon.innerHTML = " ⬢";
     });
