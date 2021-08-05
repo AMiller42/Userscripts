@@ -6,7 +6,7 @@
 // @author       Aaron Miller
 // @match        *://*.meta.stackexchange.com/*
 // @match        *://meta.stackexchange.com/*
-// @match        *://meta.stackoverflow.com/*
+// @match        *://*meta.stackoverflow.com/*
 // @icon         https://www.google.com/s2/favicons?domain=stackexchange.com
 // @grant        none
 // ==/UserScript==
