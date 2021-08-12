@@ -16,18 +16,23 @@
     var main;
     var chat = "https://chat.stackexchange.com/?tab=site&host=";
     var here = location.href;
+    
     if (here.match(/meta.stackoverflow.com/)) { // Links if at MSO
         main = "https://stackoverflow.com/questions";
         chat = "https://chat.stackoverflow.com";
+        
     } else if (here.match(/stackoverflow.com/)) { // Links if at SO
         meta = "https://meta.stackoverflow.com/questions";
         chat = "https://chat.stackoverflow.com";
+        
     } else if (here.match(/\.meta.stackexchange.com/)) { // Links if at *MSE
         main = here.replace(/.meta./, ".");
-        main = main.match(/http.*.com/)[0] + "/questions";
+        main = main.match(/http.*\.com/)[0] + "/questions";
         chat += main.match(/\/\/.*.com/)[0].slice(2);
+        
     } else if (here.match(/meta.stackexchange.com/)) { // Links if at MM
         chat = "https://chat.meta.stackexchange.com";
+        
     } else if (here.match(/.*.stackexchange.com/)) { // Links if at *SE
         meta = here.replace(/.stack/, ".meta.stack");
         meta = meta.match(/http.*.com/)[0] + "/questions";
