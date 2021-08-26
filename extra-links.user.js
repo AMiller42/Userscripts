@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Extra Sidebar Links
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/AMiller42/Userscripts
 // @version      1.0
 // @description  Adds Meta and Chat links to the SE sidebar
 // @author       Aaron Miller
