@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Simple Badges
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/AMiller42/Userscripts
 // @version      1.3
 // @description  Replaces new mod/staff badges with diamonds/hexagons, respectively
 // @author       Aaron Miller
