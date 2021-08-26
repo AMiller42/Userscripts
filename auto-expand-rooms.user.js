@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Auto-expand Rooms
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/AMiller42/Userscripts
 // @version      1.0
 // @description  Automatically expand current rooms in SE Chat sidebar
 // @author       Aaron Miller
@@ -21,7 +21,7 @@
     // Add custom scrollbar for room list
     style.innerHTML =
       `#room-div {
-           height: ${roomListSize}px;
+           max-height: ${roomListSize}px;
            overflow: auto;
        }
 
