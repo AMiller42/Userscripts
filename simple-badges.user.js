@@ -14,24 +14,36 @@
 (function() {
     'use strict';
 
-    var mods = document.getElementsByClassName("s-badge__moderator");
-    var staff = document.getElementsByClassName("s-badge__staff");
+    function simplify() {
+        var mods = document.getElementsByClassName("s-badge__moderator");
+        var staff = document.getElementsByClassName("s-badge__staff");
 
-    Object.values(mods).forEach(diamond => {
-        var anchor = document.createElement("a");
-        diamond.className = "";
-        diamond.title = "Moderator";
-        diamond.innerHTML = "";
-        anchor.innerHTML = " ♦";
-        anchor.style.cursor = "default";
-        diamond.appendChild(anchor); // Super cursed, but it works, so...
-    });
+        Object.values(mods).forEach(diamond => {
+            var anchor = document.createElement("a");
+            diamond.className = "";
+            diamond.title = "Moderator";
+            diamond.innerHTML = "";
+            anchor.innerHTML = " ♦";
+            anchor.style.cursor = "default";
+            diamond.appendChild(anchor); // Super cursed, but it works, so...
+        });
 
-    Object.values(staff).forEach(hexagon => {
-        hexagon.className = "";
-        hexagon.style.color = "orange";
-        hexagon.style.cursor = "default";
-        hexagon.title = "Staff";
-        hexagon.innerHTML = " ⬢";
+        Object.values(staff).forEach(hexagon => {
+            hexagon.className = "";
+            hexagon.style.color = "orange";
+            hexagon.style.cursor = "default";
+            hexagon.title = "Staff";
+            hexagon.innerHTML = " ⬢";
+        });
+    }
+    
+    simplify();
+    
+    let expandComments = document.getElementsByClassName("js-show-link");
+    
+    Object.values(expandComments).forEach(link => {
+        let linkObserver = new MutationObserver(simplify)
+
+        linkObserver.observe(link, {childList: true})
     });
 })();
