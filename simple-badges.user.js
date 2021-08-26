@@ -15,11 +15,11 @@
     'use strict';
 
     function simplify() {
-        var mods = document.getElementsByClassName("s-badge__moderator");
-        var staff = document.getElementsByClassName("s-badge__staff");
+        let mods = document.getElementsByClassName("s-badge__moderator");
+        let staff = document.getElementsByClassName("s-badge__staff");
 
         Object.values(mods).forEach(diamond => {
-            var anchor = document.createElement("a");
+            let anchor = document.createElement("a");
             diamond.className = "";
             diamond.title = "Moderator";
             diamond.innerHTML = "";
