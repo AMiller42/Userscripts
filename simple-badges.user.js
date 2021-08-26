@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Simple Badges
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.3
 // @description  Replaces new mod/staff badges with diamonds/hexagons, respectively
 // @author       Aaron Miller
 // @match        *://*.meta.stackexchange.com/*
