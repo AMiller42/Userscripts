@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto-expand Rooms
 // @namespace    https://github.com/AMiller42/Userscripts
-// @version      1.0
+// @version      1.1
 // @description  Automatically expand current rooms in SE Chat sidebar
 // @author       Aaron Miller
 // @match        https://chat.stackexchange.com/*
@@ -42,6 +42,13 @@
             background: #555;
         }`;
 
+    // Prevent rooms from collapsing again
+    style.innerHTML += `
+        [class^="activity-"] {
+            display: block !important;
+        }
+    `;
+
     document.head.appendChild(style);
 
 
@@ -61,17 +68,8 @@
             room.style.display = "block";
         }
 
-        // If we haven't already, put the room list in a div and start checking for changes
-        if (document.getElementById("room-div") == null) {
-            rooms.outerHTML = "<div id=\"room-div\">" + rooms.outerHTML + "</div>";
-            document.getElementById("room-div").addEventListener(
-                "DOMSubtreeModified",
-                () => {
-                    console.log("words");
-                    setTimeout(expandRooms, 1000);
-                }
-            )
-        }
+        rooms.outerHTML = "<div id=\"room-div\">" + rooms.outerHTML + "</div>";
+
     }
 
     let loadScreen = document.getElementById("loading");
@@ -89,10 +87,4 @@
     });
 
     loading.observe(loadScreen, {attributes: true});
-
-    // Make sure to keep the expanded rooms if the browser is resized
-    document.body.onresize = () => {
-        console.log("resized");
-        setTimeout(expandRooms, 500)
-    };
 })();
