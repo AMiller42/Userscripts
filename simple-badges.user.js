@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Simple Badges
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.4.1
 // @description  Replaces new mod/staff badges with diamonds/hexagons, respectively
 // @author       Aaron Miller
 // @match        *://*.meta.stackexchange.com/*
@@ -32,8 +32,8 @@
 <span title="Staff" style="cursor: default;">
     <span>
         <svg xmlns="http://www.w3.org/2000/svg"
-            width="15px"
-            height="15px"
+            width="13px"
+            height="13px"
             viewbox="0 0 100 100">
             <style>
                 .st0{
