@@ -30,8 +30,8 @@
         badge.parentNode.getElementsByTagName("a")[0].innerHTML +=
 `<span title="Staff">
     <svg xmlns="http://www.w3.org/2000/svg"
-        width="13px"
-        height="13px"
+        width="15px"
+        height="15px"
         viewbox="0 0 100 100">
         <style>
             .st0{
