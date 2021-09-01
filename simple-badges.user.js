@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Simple Badges
 // @namespace    http://tampermonkey.net/
-// @version      1.5
+// @version      1.5.2
 // @description  Replaces new mod/staff badges with diamonds/hexagons, respectively. Staff badge can also be changed to SO logo.
 // @author       Aaron Miller
 // @match        *://*.meta.stackexchange.com/*
@@ -21,7 +21,7 @@
     // Hexagon staff badge
     function hexagon(badge) {
         badge.parentNode.getElementsByTagName("a")[0].innerHTML +=
-            '<span title="Staff"style="color: orange; cursor: default; padding-left: 4px;">⬢</span>';
+            '<span title="Staff"style="color: orange; padding-left: 5px;">⬢</span>';
         badge.remove();
     }
 
@@ -64,7 +64,7 @@
 
         // Replace mod badges
         Object.values(mods).forEach(diamond => {
-            diamond.parentNode.getElementsByTagName("a")[0].innerHTML += '<span class="mod-flair" title="Moderator">♦</span>';
+            diamond.parentNode.getElementsByTagName("a")[0].innerHTML += '<span class="mod-flair" title="Moderator" style="padding-left: 2px;">♦</span>';
             diamond.remove();
         });
 
